@@ -20,5 +20,6 @@ export const OPENAI_ORGANIZATION =
 export const AZURE_DEPLOYMENT_ID =
   process.env.AZURE_DEPLOYMENT_ID || '';
 
-export const DEFAULT_MAX_TOKENS = 2048;
+export const DEFAULT_MAX_TOKENS = 
+  parseFloat(process.env.NEXT_PUBLIC_DEFAULT_MAX_TOKENS || "2048");
   

@@ -29,6 +29,7 @@ export const OpenAIStream = async (
   temperature : number,
   key: string,
   messages: Message[],
+  maxTokens: number,
 ) => {
   let url = `${OPENAI_API_HOST}/v1/chat/completions`;
   if (OPENAI_API_TYPE === 'azure') {
@@ -57,7 +58,7 @@ export const OpenAIStream = async (
         },
         ...messages,
       ],
-      max_tokens: 2048,
+      max_tokens: maxTokens,
       temperature: temperature,
       stream: true,
     }),
