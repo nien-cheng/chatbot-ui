@@ -31,5 +31,10 @@
   "Neutral": "Neutraali",
   "Creative": "Luova",
   "View Account Usage": "Näytä tilin käyttötilastot",
-  "Search...": "Hae..."
+  "Search...": "Hae...",
+  "Max Tokens": "Maksimimäärä tokenia",
+  "Higher values allow longer responses, lower values keep responses concise.": "Suurempien arvojen käyttö sallii pidempiä vastauksia, pienempien arvojen käyttö säilyttää vastaukset lyhyiksi.",
+  "Concise": "Lyhyt",
+  "Moderate": "Keskimääräinen",
+  "Long": "Pitkä"
 }

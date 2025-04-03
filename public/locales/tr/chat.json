@@ -24,5 +24,10 @@
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "Mesaj sınırı {{maxLength}} karakterdir. {{valueLength}} karakter girdiniz.",
   "Please enter a message": "Lütfen bir mesaj girin",
   "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.": "Chatbot UI, ChatGPT'nin arayüz ve işlevselliğini taklit etmeyi amaçlayan OpenAI'in sohbet modelleri için gelişmiş bir sohbetbot kitidir.",
-  "Are you sure you want to clear all messages?": "Tüm mesajları temizlemek istediğinize emin misiniz?"
+  "Are you sure you want to clear all messages?": "Tüm mesajları temizlemek istediğinize emin misiniz?",
+  "Max Tokens": "Maksimum Token",
+  "Higher values allow longer responses, lower values keep responses concise.": "Daha yüksek değerler daha uzun yanıtları, daha düşük değerler ise yanıtları kısa tutar.",
+  "Concise": "Kısa",
+  "Moderate": "Orta",
+  "Long": "Uzun"
 }

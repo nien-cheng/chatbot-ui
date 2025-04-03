@@ -24,5 +24,11 @@
   "Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.": "La limite de message est de {{maxLength}} caractères. Vous avez saisi {{valueLength}} caractères.",
   "Please enter a message": "Veuillez entrer un message",
   "Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.": "Chatbot UI est un kit de chatbot avancé pour les modèles de chat d'OpenAI visant à imiter l'interface et les fonctionnalités de ChatGPT.",
-  "Are you sure you want to clear all messages?": "Êtes-vous sûr de vouloir effacer tous les messages ?"
+  "Are you sure you want to clear all messages?": "Êtes-vous sûr de vouloir effacer tous les messages ?",
+  "Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.": "Les valeurs plus élevées comme 0,8 feront que la sortie soit plus aléatoire, tandis que les valeurs plus faibles comme 0,2 la rendront plus concentrée et déterministe.",
+  "Max Tokens": "Maximale de tokens",
+  "Higher values allow longer responses, lower values keep responses concise.": "Les valeurs plus élevées permettent des réponses plus longues, tandis que les valeurs plus faibles maintiennent les réponses concises.",
+  "Concise": "Concis",
+  "Moderate": "Modéré",
+  "Long": "Long"
 }
