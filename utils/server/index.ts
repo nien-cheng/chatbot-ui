@@ -31,6 +31,10 @@ export const OpenAIStream = async (
   messages: Message[],
   maxTokens: number,
 ) => {
+  let firstTokenTime: number | null = null;
+  let totalTokens = 0;
+  const startTime = Date.now();
+
   let url = `${OPENAI_API_HOST}/v1/chat/completions`;
   if (OPENAI_API_TYPE === 'azure') {
     url = `${OPENAI_API_HOST}/openai/deployments/${AZURE_DEPLOYMENT_ID}/chat/completions?api-version=${OPENAI_API_VERSION}`;
@@ -103,11 +107,21 @@ export const OpenAIStream = async (
 
             const text = choices[0].delta.content;
             if (text && text.length > 0) {
+              if (firstTokenTime === null) {
+                firstTokenTime = Date.now();
+              }
+              const tokenCount = text.length;
+              totalTokens += tokenCount;
               const queue = encoder.encode(text);
               controller.enqueue(queue);
             }
             
             if (choices[0].finish_reason != null) {
+              const ttft = firstTokenTime ? ((firstTokenTime - startTime) / 1000).toFixed(2) : 'N/A';
+              const elapsed = Date.now() - startTime;
+              const tps = elapsed > 0 ? (totalTokens / (elapsed / 1000)).toFixed(0) : '0';
+              const stats = `\n\n[ TTFT: ${ttft} seconds, TPS: ${tps} tokens/second ]`
+              controller.enqueue(encoder.encode(stats));
               controller.close();
               return;
             }
