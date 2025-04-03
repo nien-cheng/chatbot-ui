@@ -15,7 +15,7 @@ import {
   cleanConversationHistory,
   cleanSelectedConversation,
 } from '@/utils/app/clean';
-import { DEFAULT_SYSTEM_PROMPT, DEFAULT_TEMPERATURE } from '@/utils/app/const';
+import { DEFAULT_MAX_TOKENS, DEFAULT_SYSTEM_PROMPT, DEFAULT_TEMPERATURE } from '@/utils/app/const';
 import {
   saveConversation,
   saveConversations,
@@ -185,6 +185,7 @@ const Home = ({
       model: lastConversation?.model,
       prompt: DEFAULT_SYSTEM_PROMPT,
       temperature: lastConversation?.temperature ?? DEFAULT_TEMPERATURE,
+      maxTokens: lastConversation?.maxTokens ?? DEFAULT_MAX_TOKENS,
       folderId: null,
     };
 

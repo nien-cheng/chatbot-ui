@@ -19,6 +19,7 @@ export interface HomeInitialState {
   currentMessage: Message | undefined;
   prompts: Prompt[];
   temperature: number;
+  maxTokens: number;
   showChatbar: boolean;
   showPromptbar: boolean;
   currentFolder: FolderInterface | undefined;
@@ -49,4 +50,5 @@ export const initialState: HomeInitialState = {
   searchTerm: '',
   serverSideApiKeyIsSet: false,
   serverSidePluginKeysSet: false,
+  maxTokens: 2048,
 };
